@@ -1,6 +1,6 @@
 # PIM
 
-Product Information Management (PIM) - Supports an unlimited number of variations for the same product
+Product Information Management (PIM) - Supports an "unlimited" number of variations for the same product
 
 A product is a single item in an e-commerce catalog. Products are not necessarily physical items, they can also be digital or a service. A product is defined by a combination of property definitions.
 
@@ -24,12 +24,12 @@ Let's see some benefits of product variants:
 * Flexibility to create specific assets, content, attributes, and prices for the same product. 
 * Accommodate new business and new kinds of products with low impact and effort.
 
-Let's take a well-known example of products with variants that are T-shirts. A T-shirt model is available in 2 colors (white, black), 5 different sizes (XS, S, M, L, XL) and 2 different sleeve length (Short, Long).
+Let's take a well-known example of products with variants that are T-shirts. A T-shirt model is available in **2 colors (white, black), 5 different sizes (XS, S, M, L, XL) and 2 different sleeve length (Short, Long)**.
 
 * For all the colors and sizes of the T-shirt, some attributes are common, such as the name Cotton T-shirt with a rounded neck, category, brand, and care instructions machine wash at forty-five degrees.
 * Each T-shirt color has different pictures and could have a different composition.
 * Each T-shirt sleeve length could have a different description.
-* Each T-shirt color could be available in different sizes: XS, S, M, L or XL.
+* Each T-shirt color could be available in different sizes: **XS, S, M, L or XL**.
 * For each color/size, the identifier of the product is different (EAN/GTIN, SKU) as well as the technical specs like weight, sleeves length that could vary from a T-shirt from another.
 
 ## Concept design
