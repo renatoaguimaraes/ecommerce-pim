@@ -1,0 +1,32 @@
+[
+  {
+    "id": 121523,
+    "categories": null,
+    "name": "color",   
+    "allowVariation": true,
+    "type": "reference",
+    "status": "Enabled"
+  },
+  {
+    "id": 518984,
+    "categories": [
+      154,
+      326
+    ],
+    "name": "size",
+    "allowVariation": true,
+    "type": "reference",
+    "status": "Pending"
+  },
+  {
+    "id": 518984,
+    "categories": [
+      154,
+      326
+    ],
+    "name": "fit",
+    "allowVariation": false,
+    "type": "text",
+    "status": "Enabled"
+  }
+]

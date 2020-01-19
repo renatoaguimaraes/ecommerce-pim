@@ -1,0 +1,13 @@
+{
+  "productId": 1,
+  "settings": {
+    "hasPrice": true,
+    "hasDigitalAssets": true,
+    "hasContent": true,
+    "hasInventory": true,
+    "showListing": false,
+    "showDetail": true,
+    "addToBag": false,
+    "allowDiscount": false
+  }
+}

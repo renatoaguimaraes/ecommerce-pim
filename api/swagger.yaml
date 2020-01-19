@@ -1,0 +1,508 @@
+openapi: 3.0.0
+info:
+  title: Product
+  description: Product Information Management.
+  version: 0.0.1-SNPASHOT
+tags:
+  - name: "Products"
+    description: "Product management"
+  - name: "Product Attributes"
+    description: "Product attributes management"
+paths:
+  "/products":
+    post:
+      tags: ["Products"]
+      description: Create product
+      operationId: createProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+        required: true
+      responses:
+        "201":
+          description: Product accepted
+  "/products/{productId}":
+    get:
+      tags: ["Products"]
+      description: Get product
+      operationId: getProductById
+      parameters:
+        - name: productId
+          in: path
+          description: Product id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "Product"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+          links:
+            listProductVariants:
+              operationId: listProductVariants
+              parameters:
+                userId: "$response.body#/id"
+              description: >
+                List all variants by Product `id`.
+            listProductDescriptions:
+              operationId: listProductDescriptions
+              parameters:
+                userId: "$response.body#/id"
+              description: >
+                List all descriptions by Product `id`.
+            listProductAssets:
+              operationId: listProductAssets
+              parameters:
+                userId: "$response.body#/id"
+              description: >
+                List all assets by Product `id`.
+            listProductPrices:
+              operationId: listProductPrices
+              parameters:
+                userId: "$response.body#/id"
+              description: >
+                List all prices by Product `id`.
+        "404":
+          description: "Product not found"
+  "/products/{productId}/variants":
+    get:
+      tags: ["Products"]
+      description: List of product variants
+      operationId: listProductVariants
+      parameters:
+        - name: productId
+          in: path
+          description: Product id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "List of product variants"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Variant"
+  "/products/{productId}/descriptions":
+    get:
+      tags: ["Products"]
+      description: List of product descriptions
+      operationId: listProductDescriptions
+      parameters:
+        - name: productId
+          in: path
+          description: Product id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "List of product descriptios"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Description"
+  "/products/{productId}/assets":
+    get:
+      tags: ["Products"]
+      description: List of product assets
+      operationId: listProductAssets
+      parameters:
+        - name: productId
+          in: path
+          description: Product id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "List of product assets"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Asset"
+  "/products/{productId}/prices":
+    get:
+      tags: ["Products"]
+      description: List of product prices
+      operationId: listProductPrices
+      parameters:
+        - name: productId
+          in: path
+          description: Product id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "List of product prices"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Price"
+  "/attributes":
+    post:
+      tags: ["Product Attributes"]
+      description: Create an attribute
+      operationId: createAttribute
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Attribute"
+        required: true
+      responses:
+        "200":
+          description: Attribute created
+    get:
+      tags: ["Product Attributes"]
+      description: List of attributes
+      operationId: listAttributes
+      responses:
+        "200":
+          description: "List of attributes"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Attribute"
+  "/attributes/{name}/values":
+    post:
+      tags: ["Product Attributes"]
+      description: Create an attribute value
+      operationId: createAttributeValue
+      parameters:
+        - name: name
+          in: path
+          description: Attribute name
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AttributeValue"
+        required: true
+      responses:
+        "200":
+          description: Attribute value created
+    get:
+      tags: ["Product Attributes"]
+      description: List of attribute values
+      operationId: listAttributeValues
+      parameters:
+        - name: name
+          in: path
+          description: Attribute id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "List of attribute values"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AttributeValue"
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          example: "T-shirt Burberry High Confortable"
+        type:
+          type: string
+          enum:
+            - "Physical"
+            - "Virtual"
+            - "Service"
+        status:
+          type: string
+          enum:
+            - "Draft"
+            - "Published"
+            - "Disabled"
+        productCategory:
+          type: integer
+          format: int64
+          example: 1
+        catalogCategories:
+          type: array
+          items:
+            type: integer
+            format: int64
+          example:
+            - 1
+            - 2
+            - 3
+        bundleProducts:
+          type: array
+          items:
+            type: integer
+            format: int64
+          example: []
+        attributes:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties:
+              type: object
+          example:
+            specifications:
+              gender: "30"
+              season: "40"
+              brand: "70"
+              conditions: "80"
+            dimensions:
+              width: "60.00 cm"
+              height: "100.00 cm"
+              weight: "0.4 kg"
+            instructions:
+              care: "Machine wash at forty-five degrees."
+              fit: "This piece fits true to size. We recommend you get your regular size."
+        variantAttributes:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          example:
+            size:
+              - "1"
+              - "2"
+              - "3"
+              - "4"
+              - "5"
+            color:
+              - "10"
+              - "11"
+            sleeve:
+              - "20"
+              - "21"
+        variations:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          example:
+            pricing:
+              - color
+              - size
+            descriptions:
+              - sleeve
+            assets:
+              - color
+              - sleeve
+            catalog:
+              - color
+              - sleeve
+              - size
+        tags:
+          type: array
+          items:
+            type: string
+          example:
+            - "Black fryday"
+        merchants:
+          type: array
+          items:
+            type: integer
+            format: int64
+          example:
+            - 1
+            - 2
+            - 3
+        settings:
+          type: object
+          properties:
+            hasPrice:
+              type: boolean
+            hasDigitalAssets:
+              type: boolean
+            hasContent:
+              type: boolean
+            hasInventory:
+              type: boolean
+            showListing:
+              type: boolean
+            showDetail:
+              type: boolean
+            addToBag:
+              type: boolean
+            allowDiscount:
+              type: boolean
+    Variant:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        variantAttributesCombination:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              valueId:
+                type: integer
+          example:
+            size:
+              - valueId: 1
+            color:
+              - valueId: 10
+            sleeve:
+              - valueId: 20
+        attributes:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              valueId:
+                type: integer
+              value:
+                type: string
+          example:
+            hsconde:
+              value: "61091001"
+            gtin:
+              value: "01234567898013"
+            designerId:
+              value: "DID1231294344"
+    Attribute:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        categories:
+          type: array
+          items:
+            type: integer
+            format: int64
+        allowVariation:
+          type: boolean
+        type:
+          type: string
+          enum:
+            - "reference"
+            - "text"
+        status:
+          type: string
+          enum:
+            - "pending"
+            - "enabled"
+            - "disabled"
+      example:
+        id: 1
+        name: "color"
+        categories: null
+        allowVariation: true
+        type: "reference"
+        status: "enabled"
+    AttributeValue:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        dataType:
+          type: string
+        value:
+          type: string
+        parent:
+          type: integer
+          format: int64
+        composition:
+          type: array
+          items:
+            type: integer
+            format: int64
+        status:
+          type: string
+          enum:
+            - "pending"
+            - "enabled"
+            - "disabled"
+        metadata:
+          type: object
+          additionalProperties:
+            type: string
+      example:
+        id: 1
+        value: "Black"
+        dataType: "string"
+        composition: []
+        parent: null
+        status: "enabled"
+        metadata:
+          rgb: "#000000"
+    Asset:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        url:
+          type: string
+        variants:
+          type: array
+          items:
+            type: integer
+            format: int64
+    Price:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        variants:
+          type: array
+          items:
+            type: integer
+            format: int64
+        price:
+          type: object
+    Description:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        variants:
+          type: array
+          items:
+            type: integer
+            format: int64
+        content:
+          type: string

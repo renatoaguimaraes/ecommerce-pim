@@ -1,0 +1,45 @@
+{
+  "productId": 1,
+  "assets": [
+    {
+      "url": "http://cdn.com/asset-01.png",
+      "variants": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "url": "http://cdn.com/asset-02.png",
+      "variants": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "url": "http://cdn.com/asset-03.mpeg",
+      "variants": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "url": "http://cdn.com/asset-04.mpeg",
+      "variants": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ]
+}

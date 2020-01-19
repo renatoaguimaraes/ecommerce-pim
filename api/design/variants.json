@@ -1,0 +1,350 @@
+{
+  "productId": 1,
+  "variants": [
+    {
+      "id": 1,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8000" /* XS */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {
+        "indetification": {
+          "gtin": {
+            "value": "01234567898013"
+          },
+          "hscode": {
+            "value": "61091001"
+          },
+          "designerId": {
+            "value": "DID213124"
+          },
+          "sku": {
+            "value": "SKU12345"
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8001" /* S */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {
+        "indetification": {
+          "gtin": {
+            "value": "01234567898013"
+          },
+          "hscode": {
+            "value": "61091002"
+          },
+          "designerId": {
+            "value": "DID213125"
+          },
+          "sku": {
+            "value": "SKU12346"
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8002" /* M */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {
+        "indetification": {
+          "gtin": {
+            "value": "01234567898013"
+          },
+          "hscode": {
+            "value": "61091003"
+          },
+          "designerId": {
+            "value": "DID213126"
+          },
+          "sku": {
+            "value": "SKU12347"
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8003" /* L */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 5,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8004" /* XL */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 6,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8000" /* XS */
+        },
+        "color": {
+          "value": "3001" /* Black */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 7,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8001" /* S */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 8,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8002" /* M */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 9,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8003" /* L */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 10,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8004" /* XL */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4000" /* Short */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 11,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8000" /* XS */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 12,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8001" /* S */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 13,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8002" /* M */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 14,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8003" /* L */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 15,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8004" /* XL */
+        },
+        "color": {
+          "value": "3001" /* White */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 16,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8000" /* XS */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 17,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8001" /* S */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 18,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8002" /* M */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 19,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8003" /* L */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    },
+    {
+      "id": 20,
+      "variantAttributesCombination": {
+        "size": {
+          "value": "8004" /* XL */
+        },
+        "color": {
+          "value": "3002" /* Black */
+        },
+        "sleeve": {
+          "value": "4001" /* Long */
+        }
+      },
+      "attributes": {}
+    }
+  ]
+}

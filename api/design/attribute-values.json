@@ -1,0 +1,31 @@
+[
+  {
+    "id": 5100,
+    "attributeId": 1,
+    "value": "Purple",
+    "dataType": "string",
+    "parent": null,
+    "composition": [],
+    "metadata": {
+      "rgb": "800080"
+    }
+  },
+  {
+    "id": 23913,
+    "attributeId": 1,
+    "value": "Medium Purple",
+    "composition": [],
+    "parentId": 1215,
+    "metadata": {
+      "rgb": "9370db"
+    }
+  },
+  {
+    "id": 432562,
+    "attributeId": 100,
+    "value": "35 US",
+    "composition": [],
+    "parentId": null,
+    "metadata": {}
+  }
+]

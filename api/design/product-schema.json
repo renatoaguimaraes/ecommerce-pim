@@ -1,0 +1,413 @@
+{
+  "definitions": {},
+  "$schema": "",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "Product Schema",
+  "description": "E-commerce product",
+  "required": [
+    "id",
+    "version",
+    "productCategory",
+    "catalogCategories",
+    "type",
+    "status",
+    "bundleProducts",
+    "attributes",
+    "tags",
+    "variantAttributes",
+    "variations",
+    "merchants"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "Product id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "version": {
+      "$id": "#/properties/version",
+      "type": "string",
+      "title": "The Version Schema",
+      "default": "",
+      "examples": [
+        "1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "productCategory": {
+      "$id": "#/properties/productCategory",
+      "type": "integer",
+      "title": "The Product category Schema",
+      "description": "General product category Schema",
+      "examples": [
+        10
+      ]
+    },
+    "catalogCategories": {
+      "$id": "#/properties/catalogCategories",
+      "type": "array",
+      "title": "The catalog categories Schema",
+      "default": null,
+      "items": {
+        "$id": "#/properties/catalogCategories/items",
+        "type": "integer",
+        "title": "Categories id Schema",
+        "examples": [
+          55,
+          75,
+          90
+        ]
+      }
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "Physical"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The Status Schema",
+      "default": "",
+      "examples": [
+        "Draft"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "bundleProducts": {
+      "$id": "#/properties/bundleProducts",
+      "type": "array",
+      "title": "The Bundleproducts Schema"
+    },
+    "attributes": {
+      "$id": "#/properties/attributes",
+      "type": "object",
+      "title": "The Attributes Schema",
+      "required": [
+        "specifications",
+        "instructions",
+        "dimensions"
+      ],
+      "properties": {
+        "specifications": {
+          "$id": "#/properties/attributes/properties/specifications",
+          "type": "object",
+          "title": "The Specifications Schema",
+          "required": [
+            "gender",
+            "season",
+            "brand",
+            "condition",
+            "model"
+          ],
+          "properties": {
+            "gender": {
+              "$id": "#/properties/attributes/properties/specifications/properties/gender",
+              "type": "string",
+              "title": "The Gender Schema",
+              "default": "",
+              "examples": [
+                "7001"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "season": {
+              "$id": "#/properties/attributes/properties/specifications/properties/season",
+              "type": "string",
+              "title": "The Season Schema",
+              "default": "",
+              "examples": [
+                "7201"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "brand": {
+              "$id": "#/properties/attributes/properties/specifications/properties/brand",
+              "type": "string",
+              "title": "The Brand Schema",
+              "default": "",
+              "examples": [
+                "7502"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "condition": {
+              "$id": "#/properties/attributes/properties/specifications/properties/condition",
+              "type": "string",
+              "title": "The Condition Schema",
+              "default": "",
+              "examples": [
+                "7902"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "model": {
+              "$id": "#/properties/attributes/properties/specifications/properties/model",
+              "type": "string",
+              "title": "The Model Schema",
+              "default": "",
+              "examples": [
+                "6901"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "instructions": {
+          "$id": "#/properties/attributes/properties/instructions",
+          "type": "object",
+          "title": "The Instructions Schema",
+          "required": [
+            "care",
+            "fit"
+          ],
+          "properties": {
+            "care": {
+              "$id": "#/properties/attributes/properties/instructions/properties/care",
+              "type": "string",
+              "title": "The Care Schema",
+              "default": "",
+              "examples": [
+                "Machine Wash"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "fit": {
+              "$id": "#/properties/attributes/properties/instructions/properties/fit",
+              "type": "string",
+              "title": "The Fit Schema",
+              "default": "",
+              "examples": [
+                "This piece fits true to size. We recommend you get your regular size"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "dimensions": {
+          "$id": "#/properties/attributes/properties/dimensions",
+          "type": "object",
+          "title": "The Dimensions Schema",
+          "required": [
+            "width",
+            "height",
+            "weight"
+          ],
+          "properties": {
+            "width": {
+              "$id": "#/properties/attributes/properties/dimensions/properties/width",
+              "type": "string",
+              "title": "The Width Schema",
+              "default": "",
+              "examples": [
+                "60 cm"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "height": {
+              "$id": "#/properties/attributes/properties/dimensions/properties/height",
+              "type": "string",
+              "title": "The Height Schema",
+              "default": "",
+              "examples": [
+                "100 cm"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "weight": {
+              "$id": "#/properties/attributes/properties/dimensions/properties/weight",
+              "type": "string",
+              "title": "The Weight Schema",
+              "default": "",
+              "examples": [
+                "0.4 kg"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "tags": {
+      "$id": "#/properties/tags",
+      "type": "array",
+      "title": "The Tags Schema",
+      "items": {
+        "$id": "#/properties/tags/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "Offer",
+          "Black fryday"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "variantAttributes": {
+      "$id": "#/properties/variantAttributes",
+      "type": "object",
+      "title": "The Variantattributes Schema",
+      "required": [
+        "size",
+        "color",
+        "sleeve"
+      ],
+      "properties": {
+        "size": {
+          "$id": "#/properties/variantAttributes/properties/size",
+          "type": "array",
+          "title": "The Size Schema",
+          "items": {
+            "$id": "#/properties/variantAttributes/properties/size/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "8000",
+              "8001",
+              "8002",
+              "8003",
+              "8004"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "color": {
+          "$id": "#/properties/variantAttributes/properties/color",
+          "type": "array",
+          "title": "The Color Schema",
+          "items": {
+            "$id": "#/properties/variantAttributes/properties/color/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "3001",
+              "3002"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "sleeve": {
+          "$id": "#/properties/variantAttributes/properties/sleeve",
+          "type": "array",
+          "title": "The Sleeve Schema",
+          "items": {
+            "$id": "#/properties/variantAttributes/properties/sleeve/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "4000",
+              "4001"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "variations": {
+      "$id": "#/properties/variations",
+      "type": "object",
+      "title": "The Variations Schema",
+      "required": [
+        "pricing",
+        "descriptions",
+        "assets",
+        "catalog"
+      ],
+      "properties": {
+        "pricing": {
+          "$id": "#/properties/variations/properties/pricing",
+          "type": "array",
+          "title": "The Pricing Schema",
+          "items": {
+            "$id": "#/properties/variations/properties/pricing/items",
+            "type": "string",
+            "title": "The Attribute names Schema",
+            "default": "",
+            "examples": [
+              "color",
+              "size"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "descriptions": {
+          "$id": "#/properties/variations/properties/descriptions",
+          "type": "array",
+          "title": "The Descriptions Schema",
+          "items": {
+            "$id": "#/properties/variations/properties/descriptions/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "sleeve"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "assets": {
+          "$id": "#/properties/variations/properties/assets",
+          "type": "array",
+          "title": "The Assets Schema",
+          "items": {
+            "$id": "#/properties/variations/properties/assets/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "color",
+              "sleeve"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "catalog": {
+          "$id": "#/properties/variations/properties/catalog",
+          "type": "array",
+          "title": "The Catalog Schema",
+          "items": {
+            "$id": "#/properties/variations/properties/catalog/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "color",
+              "sleeve",
+              "size"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "merchants": {
+      "$id": "#/properties/merchants",
+      "type": "array",
+      "title": "The Merchants Schema",
+      "items": {
+        "$id": "#/properties/merchants/items",
+        "type": "integer",
+        "title": "The Items Schema",
+        "default": 0,
+        "examples": [
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  }
+}

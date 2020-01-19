@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "ba0ed471-9cd0-408a-bdad-93bca3acc7b3",
+		"name": "P.I.M.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schema\": null,\n    \"name\": \"Capria cutout shoulder bag\",\n    \"type\": \"Product\",\n    \"status\": \"Draft\",\n    \"categories\": [\n        \"bags\"\n    ],\n    \"attributes\": {\n        \"classification\": {\n            \"brand\": \"Amazing Brand\",\n            \"collection\": \"Summer 2020\",\n            \"gender\": \"Man\",\n            \"model\": \"A1\",\n            \"season\": \"SS2020\"\n        },\n        \"descriptions\": {\n            \"full\": \"Brown leather Capria cutout shoulder bag from BY FAR featuring gold-tone hardware, a chain shoulder strap and a top zip closure.\",\n            \"short\": \"Brown leather Capria cutout shoulder bag from BY FAR.\"\n        },\n        \"sizeAndFit\": {\n            \"bust\": \"81 cm\",\n            \"height\": \"1.75 m\",\n            \"hips\": \"88 cm\",\n            \"info\": \"Model is 1.75 m wearing size OS One Size.\",\n            \"waist\": \"63 cm\"\n        },\n        \"mesurements\": {\n            \"depth\": \"5 cm\",\n            \"height\": \"16 cm\",\n            \"strap\": \"42 cm\",\n            \"width\": \"23 cm\"\n        },\n        \"references\": {\n            \"desinerId\": \"19FWCAPSPHLMEDPL\",\n            \"ean\": \"12314325345\",\n            \"hscode\": \"12.1.1.22\",\n            \"serialNumber\": \"3954210-3\"\n        }\n    },\n    \"compositions\": {\n        \"collar\": {\n            \"cotton\": \"30%\",\n            \"polyester\": \"70%\"\n        }\n    },\n    \"variation\": {\n        \"color\": [\n            \"red\",\n            \"green\",\n            \"blue\",\n            \"black\"\n        ],\n        \"size\": [\n            \"xs\",\n            \"s\",\n            \"m\",\n            \"l\",\n            \"xl\"\n        ],\n        \"sleeve\": [\n            \"short\",\n            \"long\"\n        ]\n    },\n    \"tags\": [\n        \"coming soon\",\n        \"black friday\"\n    ],\n    \"configuration\": {\n        \"plp\": true,\n        \"pdp\": true,\n        \"addToCart\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product - Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/5de650d96c2058f8af00b854",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5de650d96c2058f8af00b854"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product - Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"op\":\"replace\",\n      \"path\":\"/status\",\n      \"value\":\"Draft\"\n   },\n   {\n      \"op\":\"add\",\n      \"path\":\"/attributes\",\n      \"value\": {\n      \t\"care\": {\n      \t\t\"instructions\": \"Whash until 50 degrees.\"\n    \t}\n      }\n   }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/5de650d96c2058f8af00b854",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5de650d96c2058f8af00b854"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Variant",
+			"item": [
+				{
+					"name": "Product Variant - List ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/5de7005cc022730343ecd473/variants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5de7005cc022730343ecd473",
+								"variants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Variant - Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/5de650d96c2058f8af00b854/variants/5de650d96c2058f8af00b855",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5de650d96c2058f8af00b854",
+								"variants",
+								"5de650d96c2058f8af00b855"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Variant - Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"op\":\"add\",\n      \"path\":\"/attributes\",\n      \"value\":{\n         \"references\":{\n            \"desinerId\":\"20FWCAPSPHLMEDPE\",\n            \"ean\":\"90091323\",\n            \"hscode\":\"12.1.1.22\",\n            \"serialNumber\":\"3954210-3\"\n         }\n      }\n   },\n   {\n      \"op\":\"add\",\n      \"path\":\"/compositions\",\n      \"value\":{\n         \"collar\":{\n            \"cotton\":\"40%\",\n            \"polyester\":\"60%\"\n         }\n      }\n   }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/5de650d96c2058f8af00b854/variants/5de650d96c2058f8af00b855",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5de650d96c2058f8af00b854",
+								"variants",
+								"5de650d96c2058f8af00b855"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Assets",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Prices",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Attribute",
+			"item": [
+				{
+					"name": "Attribute - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"size\",\n  \"allowVariation\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/attributes/variation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attributes",
+								"variation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - Get by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/attributes/variation/5de4613bb90c52629ee13e2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attributes",
+								"variation",
+								"5de4613bb90c52629ee13e2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Value - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": \"xs\",\n  \"composition\": [\"5de4539a092669ca13bec6f6\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/attributes/variation/5de44ba616a58709377caf19/values",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attributes",
+								"variation",
+								"5de44ba616a58709377caf19",
+								"values"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Value - Get by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/attributes/variation/5de44ba616a58709377caf19/values/5de44c0fed8c8c69595ed454",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attributes",
+								"variation",
+								"5de44ba616a58709377caf19",
+								"values",
+								"5de44c0fed8c8c69595ed454"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

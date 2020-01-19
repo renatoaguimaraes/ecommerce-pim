@@ -1,0 +1,28 @@
+{
+  "variantId": 1,
+  "stockLevel": 8,
+  "stockPoints": [
+    {
+      "id": 1,
+      "bucketId": 1,
+      "stockLevel": 5,
+      "labels": [
+        "concession"
+      ],
+      "attributes": [],
+      "barcodes": [
+        "01234567898012"
+      ]
+    },
+    {
+      "id": 2,
+      "bucketId": 2,
+      "stockLevel": 3,
+      "labels": [],
+      "attributes": [],
+      "barcodes": [
+        "01234567898013"
+      ]
+    }
+  ]
+}

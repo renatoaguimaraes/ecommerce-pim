@@ -1,0 +1,75 @@
+{
+  "productId": 1,
+  "prices": [
+    {
+      "variants": [
+        1,
+        6
+      ],
+      "price": { /* price by variant ... */},
+    },
+    {
+      "variants": [
+        2,
+        7
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        3,
+        8
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        4,
+        9
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        5,
+        10
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        11,
+        16
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        12,
+        17
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        13,
+        18
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        14,
+        19
+      ],
+      "price": { /* price by variant ... */}
+    },
+    {
+      "variants": [
+        15,
+        20
+      ],
+      "price": { /* price by variant ... */}
+    }
+  ]
+}

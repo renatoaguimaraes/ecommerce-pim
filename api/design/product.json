@@ -1,0 +1,113 @@
+{
+  "id": 1,
+  "version": "1",
+  "productCategory": 10,
+  "catalogCategories": [
+    55,
+    75,
+    90
+  ],
+  "type": "Physical", /* Virtual, Service */
+  "status": "Draft",  /* Ready, Published, Disabled */
+  "bundleProducts": [],
+  "attributes": {
+    "specifications": {
+      "gender": {
+        "value": "7001"
+      },
+      "season": {
+        "value": "7201"
+      },
+      "brand": {
+        "value": "7502"
+      },
+      "condition": {
+        "value": "7902"
+      },
+      "model": {
+        "value": "6901"
+      }
+    },
+    "instructions": {
+      "care": {
+        "value": "Machine Wash"
+      },
+      "fit": {
+        "value": "This piece fits true to size. We recommend you get your regular size"
+      }
+    },
+    "dimensions" : {
+      "width": {
+        "value" : "60 cm"
+      },
+      "height": {
+        "value" : "100 cm"
+      },
+      "weight": {        
+        "value" : "0.4 kg"
+      }
+    }  
+  },
+  "tags": [
+    "Offer",
+    "Black fryday"
+  ],  
+  "variantAttributes": {
+    "size": [
+      {
+        "value": "8000" /* XS */
+      }, 
+      {
+        "value": "8001" /* S  */
+      }, 
+      {
+        "value": "8002" /* M  */
+      }, 
+      {
+        "value": "8003" /* L  */
+      }, 
+      {
+        "value": "8004" /* XL */
+      } 
+    ],
+    "color": [
+      {
+        "value": "3001" /* White */
+      }, 
+      {
+        "value": "3002" /* Black */
+      } 
+    ],
+    "sleeve": [
+      {
+        "value": "4000" /* Short */
+      }, 
+      {
+        "value": "4001" /* Long  */
+      } 
+    ]
+  },
+  "variations": { 
+    "pricing": [
+      "color",
+      "size"
+    ],
+    "descriptions": [
+      "sleeve"
+    ],
+    "assets": [
+      "color",
+      "sleeve"
+    ],
+    "catalog": [
+      "color",
+      "sleeve",
+      "size"
+    ]
+  },
+  "merchants": [
+    1,
+    2,
+    3
+  ]
+}
