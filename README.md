@@ -2,6 +2,8 @@
 
 Product Information Management (PIM) - Supports an "unlimited" number of variations for the same product.
 
+![PIM design](pim.png)
+
 A product is a single item in an e-commerce platform. Products are not necessarily physical items, they can also be digital or a service. A product is defined by a combination of property definitions.
 
 Products with variants are products that have similarities, they are based on the same model but differ in some aspects from one another. As an e-commerce platform, we offer customers various purchase options for a product such as different colors, sizes, dimensions, flavors, materials, etc. For example:
