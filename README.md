@@ -6,7 +6,7 @@ Product Information Management (PIM)
 
 A product is a single item in an e-commerce platform. Products are not necessarily physical items, they can also be digital or a service. A product is defined by a combination of property definitions.
 
-Products with variants are products that have similarities, they are based on the same model but differ in some aspects from one another. As an e-commerce platform, we offer customers various purchase options for a product such as different colors, sizes, dimensions, flavors, materials, etc. For example:
+Products with variants are products that have similarities, they are based on the same model but differ in some aspects from one another. An e-commerce platform offers to the customer many purchase options for the same product such as different colors, sizes, dimensions, flavors, materials, etc. For example:
 
 * T-shirts available in different colors and sizes;
 * Smartphones varying in color, screen size and internal memory size;
