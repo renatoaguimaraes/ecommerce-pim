@@ -34,4 +34,4 @@ jobs:
         fi
 
     - name: Build
-      run: cd $GOPATH/src/github.com/$GITHUB_REPOSITORY && ls -lha
+      run: ls -lha /home/runner/work/ecommerce-pim/ecommerce-pim/
