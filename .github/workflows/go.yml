@@ -34,4 +34,4 @@ jobs:
         fi
 
     - name: Build
-      run: ls -lha
+      run: ls -lha $GOPATH/src/github.com/$GITHUB_REPOSITORY
