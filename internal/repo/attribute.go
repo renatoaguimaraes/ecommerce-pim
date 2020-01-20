@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/google/logger"
-	"github.com/renatoaguimaraes/ecm-pim/internal/driver"
-	"github.com/renatoaguimaraes/ecm-pim/internal/model"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/driver"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/model"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

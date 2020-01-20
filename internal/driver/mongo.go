@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/renatoaguimaraes/ecm-pim/internal/util"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/util"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )

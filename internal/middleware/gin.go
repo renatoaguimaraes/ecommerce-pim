@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/renatoaguimaraes/ecm-pim/internal/controller"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/controller"
 )
 
 // Start server api

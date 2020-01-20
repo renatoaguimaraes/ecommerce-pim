@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/renatoaguimaraes/ecm-pim/internal/model"
-	"github.com/renatoaguimaraes/ecm-pim/internal/repo"
-	"github.com/renatoaguimaraes/ecm-pim/internal/service"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/model"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/repo"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/service"
 )
 
 // CreateProduct create a product

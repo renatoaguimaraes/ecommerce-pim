@@ -1,6 +1,6 @@
 package service
 
-import "github.com/renatoaguimaraes/ecm-pim/internal/model"
+import "github.com/renatoaguimaraes/ecommerce-pim/internal/model"
 
 //MapToMatrix convert a variation to bi-dimensional matrix
 func MapToMatrix(variation model.Variation) [][]model.Combination {

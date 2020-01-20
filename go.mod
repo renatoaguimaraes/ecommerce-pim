@@ -1,4 +1,4 @@
-module github.com/renatoaguimaraes/ecm-pim
+module github.com/renatoaguimaraes/ecommerce-pim
 
 go 1.13
 

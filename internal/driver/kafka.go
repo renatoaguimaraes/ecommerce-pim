@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/renatoaguimaraes/ecm-pim/internal/util"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/util"
 	"github.com/segmentio/kafka-go"
 )
 

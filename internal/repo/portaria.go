@@ -1,7 +1,7 @@
 package repo
 
 import (
-	"github.com/renatoaguimaraes/ecm-pim/internal/model"
+	"github.com/renatoaguimaraes/ecommerce-pim/internal/model"
 )
 
 // VisitanteRepo interface
