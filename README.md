@@ -38,4 +38,3 @@ Let's take a well-known example of products with variants that are T-shirts. A T
 
 The concept design was based on a simple idea, product variants are combined in a multidimensional matrix, where each axis/dimension is a product attribute variation with possible values for that specific product; so, the combination of each matrix element is a variant. The multidimensional variant matrix is very flexible because it's working at the lowest granularity of a product variation and also can be grouped by other information domains as they needed.
 
-![Concept design](product-variant.png)
