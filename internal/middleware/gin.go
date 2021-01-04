@@ -8,11 +8,6 @@ import (
 // Start server api
 func Start() {
 	r := gin.Default()
-	//
-	r.POST("/portaria/visitantes", controller.CreateVisitate)
-	r.GET("/portaria/visitantes", controller.ListVisitate)
-	r.GET("/portaria/visitantes/:visitanteId", controller.GetVisitanteByID)
-	r.PATCH("/portaria/visitantes/:visitanteId", controller.UpdateVisitate)
 	// products
 	r.POST("/products", controller.CreateProduct)
 	r.GET("/products", controller.ListProducts)
